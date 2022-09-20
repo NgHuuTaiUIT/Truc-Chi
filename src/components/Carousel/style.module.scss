@@ -1,0 +1,85 @@
+.sliderWrapper {
+  > button {
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    background-image: url("../../assets/icon/chevron-right.svg") !important;
+    background-repeat: no-repeat !important;
+    &::before {
+      display: none;
+    }
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    right: 0px;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center !important;
+    z-index: 99;
+    // background-size: cover !important;
+    &:hover{
+      background-color: #FFFFFF4D;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15); 
+      border: 0;
+     }
+     
+    @media (max-width:768px) {
+      height: 50px;
+      width: 50px;
+      background-size: 15px !important;
+    }
+
+    &:first-child {
+      background-image: url("../../assets/icon/chevron-left.svg") !important;
+      background-repeat: no-repeat;
+      left: 0px !important;
+      right: 0;
+    }
+  }
+
+  > button.slick-disabled {
+    background-image: none !important;
+  }
+
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-next:hover {
+    color: transparent;
+    outline: none;
+    background-image: url("../../assets/icon/chevron-left.svg") !important;
+  }
+}
+
+// .wrapContent {
+
+//   .imgCard {
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%,-50%);
+//       background-image: url('../../assets/icon/play-black.svg');
+//       background-size: cover;
+//       height: 70px;
+//       width: 70px;
+//       transition:all 0.2s;
+//   }
+// //   .audioCard {
+// //     position: absolute;
+// //     top: 50%;
+// //     left: 50%;
+// //     transform: translate(-50%,-50%);
+// //     background-image: url('../../assets/icon/music-black.svg');
+// //     background-size: cover;
+// //     height: 70px;
+// //     width: 70px;
+// //     transition:all 0.2s;
+// // }
+  
+//   &:hover{
+//     .imgCard {
+//       width: 100px;
+//       height: 100px;
+//     }
+//   }
+// }
