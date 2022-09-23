@@ -58,7 +58,7 @@ const Posts = () => {
             </div>
           ))}
         </div>
-        <IconArrow className="ml-auto mt-[52px] cursor-pointer" />
+        <IconArrow className="ml-auto mt-[20px] md:mt-[52px] cursor-pointer" />
       </div>
     </Container>
   );
@@ -79,8 +79,8 @@ const Instagram = () => {
   ]
   return (
     <Container className="max-w-[80%] m-auto min-h-0">
-        <h1 className="mb-[125px]">Instagram</h1>
-        <div className="grid lg:grid-cols-5 grid-cols-2">
+        <h1 className="mb-[35px] md:mb-[100px] !text-[58px] md:text-[84px]">Instagram</h1>
+        <div className="grid grid-cols-2 lg:grid-cols-5">
           {data.map(img => <img src={img} alt="" className="w-full h-full px-[10px] py-[20px]" />)}
         </div>
     </Container>
@@ -92,7 +92,7 @@ const NewsPage = () => {
     <>
       <Banner />
       <Posts />
-      <IconLine className="m-auto mb-[125px] max-w-[80%]"/>
+      <IconLine className="m-auto mb-[60px] md:mb-[125px] max-w-[80%]"/>
       <Instagram/>
     </>
   );

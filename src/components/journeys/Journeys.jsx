@@ -74,13 +74,13 @@ const Journeys = () => {
   return (
     <Container>
       <h1>Hành trình Trúc Chỉ</h1>
-      <div className="max-w-[80%] flex justify-between flex-1 h-full m-auto gap-[10%] mt-[40px] flex-wrap flex-col xl:flex-row">
-        <div className="flex flex-col justify-between flex-1 py-[30px]">
-          <h3 className="md:text-left text-center">{data[dataShow].title}</h3>
-          <p className="md:text-left text-txt2 my-[42px] text-ellipsis" >
+      <div className="max-w-[80%] flex justify-between flex-1 h-full m-auto gap-[10%] mt-[20px] md:mt-[40px] flex-wrap flex-col lg:flex-row">
+        <div className="flex flex-col lg:justify-between flex-1 py-[10px] md:py-[30px]">
+          <h3 className="text-center md:text-left">{data[dataShow].title}</h3>
+          <p className="md:text-left text-txt2 my-[20px] md:my-[42px] text-ellipsis h-[100px]" >
             {data[dataShow].content}
           </p>
-          <div className="flex gap-[65px] justify-center items-center flex-wrap md:justify-between">
+          <div className="flex gap-[30px] md:gap-[65px] justify-center items-center flex-col md:flex-row md:justify-between">
             <button>Xem thêm</button>
             <div className="flex justify-between gap-[50px]">
               <button
@@ -96,11 +96,11 @@ const Journeys = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 w-full py-[30px]">
-          <img src={data[dataShow].imgSrc} alt="" className=" min-h-[623px] object-cover min-w-[320px] m-auto w-full" />
+        <div className="flex-1 w-full py-[10px] md:py-[30px]">
+          <img src={data[dataShow].imgSrc} alt="" className=" max-h-[623px] h-full object-cover min-w-[320px] m-auto w-full" />
         </div>
       </div>
-      <IconLine className="mt-[125px] m-auto max-w-[80%]" />
+      <IconLine className="mt-[65px] md:mt-[125px] m-auto max-w-[80%]" />
     </Container>
   );
 };

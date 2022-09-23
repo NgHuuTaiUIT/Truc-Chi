@@ -6,7 +6,7 @@ import { ReactComponent as IconPlay } from "../../assets/icon/play-circle.svg";
 
 const BannerVideo = () => {
     return (
-        <Container>
+        <Container className='min-h-[500px] md:min-h-[100vh]'>
             <img src={imgBanner} alt="" className='absolute inset-0 object-cover w-full h-full'/>
             {/* <div className='absolute inset-0'>
                 <ReactPlayer

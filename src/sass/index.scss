@@ -25,7 +25,7 @@
 
 .App {
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   color: $txt-1;
   font-family: "Roboto";
 }
@@ -39,7 +39,7 @@ h1 {
   font-family: "iCiel Amerigraf";
   font-weight: 400;
   font-size: 84px;
-  line-height: 148px;
+  // line-height: 148px;
   text-align: center;
   color: #e3dcd2;
   white-space: break-spaces;
@@ -59,14 +59,14 @@ h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 69px;
-  line-height: 106px;
+  // line-height: 106px;
   /* or 153% */
   text-align: center;
   color: #e3dcd2;
   white-space: break-spaces;
 
   @media (max-width: 768px) {
-    font-size: 66px;
+    font-size: 38px;
     // line-height: normal;
   }
 }
@@ -76,7 +76,7 @@ h3 {
   font-style: normal;
   font-weight: 500;
   font-size: 54px;
-  line-height: 81px;
+  // line-height: 81px;
   color: #ffffff;
   white-space: break-spaces;
   @media (max-width: 768px) {
@@ -90,13 +90,13 @@ p {
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
-  line-height: 48px;
+  // line-height: 48px;
   /* or 192% */
   text-align: center;
   white-space: break-spaces;
   color: #ffffff;
   @media (max-width: 768px) {
-    // font-size: 22px;
+    font-size: 22px;
     line-height: 48px;
   }
 
@@ -116,10 +116,13 @@ h4 {
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
-  line-height: 48px;
+  // line-height: 48px;
   text-align: center;
 
   color: #ffffff;
+  @media (max-width:768px) {
+    font-size: 24px;
+  }
 }
 
 img {
@@ -171,5 +174,5 @@ input {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
-  height: 250px;
+  height: fit-content;
 }

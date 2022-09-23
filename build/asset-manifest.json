@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a771ebb8.css",
+    "main.js": "./static/js/main.5eb9c4b2.js",
+    "static/media/banner.png": "./static/media/banner.11f36bd8045923087c0c.png",
+    "static/media/definition.png": "./static/media/definition.01341aac68680eed17ad.png",
+    "static/media/about-banner.png": "./static/media/about-banner.f0228ccd958c7d0fd8fe.png",
+    "static/media/contact-banner.png": "./static/media/contact-banner.faa44e537a003e3d34a6.png",
+    "static/media/news-banner.png": "./static/media/news-banner.4bb99b68d831e2436517.png",
+    "static/media/iCielAmerigraf.otf": "./static/media/iCielAmerigraf.792ae1f427d77fe00852.otf",
+    "static/media/chungnhan.png": "./static/media/chungnhan.0efbd9c38cd08811c3ac.png",
+    "static/media/logo.svg": "./static/media/logo.a14427de16a863b9d1fe262245be79bd.svg",
+    "static/media/instagram.svg": "./static/media/instagram.0c79b0dd33e8892c25ecbc5074ffbdc7.svg",
+    "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "./static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/menu.svg": "./static/media/menu.96a91e16fea03ffafef1075c0d875994.svg",
+    "static/media/line.svg": "./static/media/line.c633b9c8a0ec6b31eb72f83835a0cd72.svg",
+    "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
+    "static/media/youtube.svg": "./static/media/youtube.9314a1b0af83a9b4e1205691f058c630.svg",
+    "index.html": "./index.html",
+    "static/media/plus.svg": "./static/media/plus.ba42a79f7752ff50e34e625dd2aef019.svg",
+    "static/media/search.svg": "./static/media/search.61d6f213620ed925782c8a7a04fa7c30.svg",
+    "static/media/facebook.svg": "./static/media/facebook.95b4485082ebc95e5932e034a572d0b3.svg",
+    "static/media/arrow.svg": "./static/media/arrow.08555b711d11238b62516d390658a9b1.svg",
+    "static/media/chevron-left.svg": "./static/media/chevron-left.4f02b3d1f380d5a9f230016daaac5fad.svg",
+    "static/media/chevron-right.svg": "./static/media/chevron-right.feb008f4f67685ea6f0191d10fe0dacb.svg",
+    "static/media/play-circle.svg": "./static/media/play-circle.6b8b23e220475e5e6fab7e8e313f8c47.svg",
+    "main.a771ebb8.css.map": "./static/css/main.a771ebb8.css.map",
+    "main.5eb9c4b2.js.map": "./static/js/main.5eb9c4b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a771ebb8.css",
+    "static/js/main.5eb9c4b2.js"
+  ]
+}

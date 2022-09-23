@@ -24,7 +24,7 @@ const News = () => {
         <Container>
         <div className="max-w-[90%] m-auto">
           <h1>Nghệ thuật Trúc Chỉ</h1>
-          <p className="px-[35px] py-[40px]">Trúc Chỉ là Nghệ - thuật - giấy, Giấy – nghệ - thuật của Việt Nam, một Giá trị Việt mới có điểm khởi đầu và quê hương tại Cố đô Huế.</p>
+          <p className="px-[35px] py-[20px] md:py-[40px]">Trúc Chỉ là Nghệ - thuật - giấy, Giấy – nghệ - thuật của Việt Nam, một Giá trị Việt mới có điểm khởi đầu và quê hương tại Cố đô Huế.</p>
           <Carousel setting={setting}>
             {data.map((item, idx) => (
               <div key={idx} className="px-[35px]">
@@ -33,12 +33,13 @@ const News = () => {
                   hoverable
                   cover={
                     <img
+                      className='min-h-[300px]'
                       alt="example"
                       src={item.imgSrc}
                     />
                   }>
                     <p className='justify-center'>{item.content}</p>
-                    <button className="m-auto my-[40px]">Xem thêm</button>
+                    <button className="m-auto my-[20px] md:my-[40px]">Xem thêm</button>
                 </Card>
               </div>
             ))}

@@ -2,7 +2,7 @@ import Container from "../Container/Container";
 
 const Banner = ({banner, className, style}) => {
   return (
-    <Container className={className}>
+    <Container className={className + 'min-h-[100vh]'} >
       <img
         src={banner}
         alt=""

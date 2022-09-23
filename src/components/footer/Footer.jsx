@@ -13,7 +13,7 @@ const Footer = () => {
             <div className='footer-container w-[85%] mx-auto'>
                 <div className='flex items-center justify-between gap-[40px] md:flex-row flex-col'>
                     <LogoIcon/>
-                    <IconLine className="m-auto max-w-[100%]"/>
+                    <IconLine className="m-auto md:m-0 max-w-[100%]"/>
                 </div>
                 <div className="flex flex-wrap md:flex-nowrap justify-between content gap-[85px] md:mt-[155px] mt-[60px] mb-[128px]">
                     <div className="flex justify-between adress gap-[24px] flex-wrap lg:flex-nowrap ">

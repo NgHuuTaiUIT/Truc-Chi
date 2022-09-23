@@ -13,12 +13,12 @@ const Header = () => {
 
   return (
     <div className="fixed w-full mx-auto header z-[10]">
-      <div className="flex items-center justify-between w-[85%] mx-auto mt-8">
+      <div className="flex items-center justify-between md:w-[85%] w-[95%] mx-auto mt-8">
         <div className="logo-icon">
           <LogoIcon className="md:w-auto w-[80%]" />
         </div>
         <div className="flex items-center justify-center gap-[30px] relative">
-          <div className="input-container w-[467px] relative md:flex hidden items-center ">
+          <div className="input-container w-[100%] relative md:flex hidden items-center ">
             <LogoSearch className="absolute right-[36px] " />
             <Input
               // placeholder="Basic usage"
