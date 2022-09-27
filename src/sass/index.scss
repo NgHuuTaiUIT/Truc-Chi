@@ -109,6 +109,10 @@ span {
   font-size: 32px;
 
   color: #e3dcd2;
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 48px;
+  }
 }
 
 h4 {
@@ -158,14 +162,12 @@ input {
   color: $txt-1;
 }
 
-.container {
-  &-fluid {
-    padding-top: 29vh;
-  }
-}
 
 .fluid {
   padding-top: 190px;
+  @media (max-width:768px) {
+    padding-top: 150px;
+    }
 }
 
 .text-ellipsis {
@@ -175,4 +177,11 @@ input {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   height: fit-content;
+}
+
+.icon-heart {
+  > path {
+    fill: #E33232;
+    stroke: none;
+  }
 }

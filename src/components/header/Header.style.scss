@@ -1,15 +1,30 @@
 .header {
+    // .wrap-input-search{
+    //     transition: all 150ms;
+    //     &:hover,&:focus, &:active {
+    //         box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+    //         background: #ffffff26;
+
+    //     }
+    // }
+    .border-footer {
+        transition: all 150ms;
+    }
     .input-search {
         background: transparent;
         transition: all 150ms;
-        border-width: 0 0 2px 0;
+        // border-width: 0 0 2px 0;
         &:hover,&:focus {
             border-width: 0 0 0px 0;
-            // box-shadow:none;
+            box-shadow:none;
             border: none;
-            background: rgba(255, 255, 255, 0.15);
+            background: #ffffff26;
             box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
+
+            & + .border-footer {
+                opacity: 0;
+            }
         }
     }
 }

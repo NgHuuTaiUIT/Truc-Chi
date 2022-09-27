@@ -8,7 +8,7 @@ const MenuRight = props => {
     { title: "Trang chủ", path: "/" },
     { title: "Về chúng tôi", path: "/about" },
     { title: "Hành trình", path: "/journey" },
-    { title: "Sản phẩm", path: "/product" },
+    { title: "Sản phẩm", path: "/products" },
     { title: "Tin tức", path: "/news" },
     { title: "Liên hệ", path: "/contact" }
   ];

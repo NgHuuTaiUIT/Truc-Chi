@@ -3,14 +3,14 @@ import CoverBackGround from "./components/cover-backgrond/CoverBackGround";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import MenuRight from "./components/menu-right/MenuRight";
-import {
-  CoverBackGroundProvider
-} from "./context/CoverBackgroundContext";
+import { CoverBackGroundProvider } from "./context/CoverBackgroundContext";
 import { MenuContextProvider } from "./context/MenuContext";
 import AboutUs from "./page/aboutUs";
 import ContactPage from "./page/contactPage";
 import MainPage from "./page/mainPage";
 import NewsPage from "./page/newsPage";
+import ProductDetail from "./page/productDetail";
+import ProductPage from "./page/productPage";
 
 function Layout() {
   return (
@@ -19,10 +19,10 @@ function Layout() {
         <MenuContextProvider>
           <div className="relative bg-primaryBg App">
             <Header />
-            <MenuRight/>
-            <MainPage/>
-            <Footer/>
-            <CoverBackGround/>
+            <MenuRight />
+            <MainPage />
+            <Footer />
+            <CoverBackGround />
           </div>
         </MenuContextProvider>
       </CoverBackGroundProvider>
@@ -33,33 +33,38 @@ function Layout() {
 function App() {
   return (
     <>
-    <CoverBackGroundProvider>
+      <CoverBackGroundProvider>
         <MenuContextProvider>
           <div className="relative bg-primaryBg App">
-            <Header />
             <Router basename={process.env.PUBLIC_URL}>
-              <MenuRight/>
+              <Header />
+              <MenuRight />
               <Switch>
-                <Route exact path='/'>
-                  <MainPage/>
+                <Route exact path="/">
+                  <MainPage />
                 </Route>
-                <Route  path='/about'>
-                  <AboutUs/>
+                <Route path="/about">
+                  <AboutUs />
                 </Route>
-                <Route  path='/news'>
+                <Route path="/news">
                   <NewsPage />
                 </Route>
-                <Route  path='/contact'>
+                <Route path="/contact">
                   <ContactPage />
                 </Route>
+                <Route path="/products">
+                  <ProductPage />
+                </Route>
+                <Route path="/product/:id">
+                  <ProductDetail />
+                </Route>
               </Switch>
+              <Footer />
             </Router>
-            <Footer/>
-            <CoverBackGround/>
+            <CoverBackGround />
           </div>
         </MenuContextProvider>
       </CoverBackGroundProvider>
-    
     </>
   );
 }

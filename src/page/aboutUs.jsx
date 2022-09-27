@@ -6,7 +6,7 @@ import historyImg from "../assets/images/history.png";
 
 const Banner = () => {
   return (
-    <Container className='min-h-[100vh]'>
+    <Container className='md:min-h-[1024px] min-h-[500px]'>
       <img
         src={banner}
         alt=""
