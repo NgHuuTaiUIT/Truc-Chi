@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import styles from "./style.module.scss";
 
-const Carousel = ({ data,children,setting }) => {
+const Carousel = ({ data,children,setting, customCss = '' }) => {
   const settings = {
     dots: false,
     speed: 500,
@@ -47,7 +47,7 @@ const Carousel = ({ data,children,setting }) => {
   return (
     <div className="bg-primary-bg ">
       <div>
-        <Slider {...settings} className={styles.sliderWrapper}>
+        <Slider {...settings} className={styles.sliderWrapper + ` ${customCss}`} slickNext={() =>{}}>
           {children}
           {/* {data.items.map((item, idx) => (
             <div key={idx} className="px-2">

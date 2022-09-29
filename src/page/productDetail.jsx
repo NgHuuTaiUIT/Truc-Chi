@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Carousel from "../components/Carousel";
-import ProductItem from "../components/ProductItem/ProductItem";
-import { getProducts } from "../utils/getData";
-
+import ProductCorrelate from "../components/ProductCorrelate/ProductCorrelate";
+let removeTimeoutIndex;
 const ProductDetail = () => {
-  const products = getProducts();
 
   const setting = {
     dots: true,
@@ -46,11 +43,22 @@ const ProductDetail = () => {
   };
 
   const [active, setActive] = useState(0);
+  const [removeTimeoutIndex, setRemoveTimeoutIndex] = useState(null);
+
   console.log(active);
-//   const i = setInterval(() => setActive(active <= 2 ? active + 1 : 0),[1000])
+  //   const i = setInterval(() => setActive(active <= 2 ? active + 1 : 0),[1000])
   useEffect(() => {
-  }, []);
-  
+    // let preTimeoutIndex = setTimeout(() => {});
+    // while(preTimeoutIndex--){
+    clearTimeout(removeTimeoutIndex);
+    // }
+    const removeTimeoutIdx = setTimeout(() => {
+      setActive(pre => pre < 2 ? pre + 1 : 0);
+      clearTimeout(removeTimeoutIndex);
+    }, [3000]);
+    setRemoveTimeoutIndex(removeTimeoutIdx);
+  }, [active]);
+
   const imgs = [
     "../../assets/images/product-1.png",
     "../../assets/images/product-2.png",
@@ -65,12 +73,24 @@ const ProductDetail = () => {
             <img src={imgs[0]} alt="w-full" className="w-full opacity-0" />
             {imgs.map((img, idx) => (
               <div className="absolute inset-0 ">
-                <img src={img} alt="" className="w-full transition-opacity duration-500" key={idx} style={{opacity: active === idx ? 1 : 0}}/>
+                <img
+                  src={img}
+                  alt=""
+                  className="w-full transition-opacity duration-1000"
+                  key={idx}
+                  style={{ opacity: active === idx ? 1 : 0 }}
+                />
               </div>
             ))}
             <ul className="flex gap-[30px] absolute bottom-0 justify-center items-center w-full">
               {imgs.map((img, idx) => (
-                <li className="min-h-[20px] min-w-[20px] rounded-full bg-txt2"></li>
+                <li
+                  className="min-h-[20px] min-w-[20px] rounded-full transition-colors duration-1000 cursor-pointer"
+                  style={{
+                    backgroundColor: active === idx ? "#E3DCD2" : "#BC9F85"
+                  }}
+                  onClick={() => setActive(idx)}
+                  ></li>
               ))}
             </ul>
           </div>
@@ -93,31 +113,7 @@ const ProductDetail = () => {
         <h4 className="text-left">Sản phẩm liên quan</h4>
         {/* <ListProduct /> */}
         {/* <div className="mb-[127px] grid justify-between w-full xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[40px]"> */}
-        <Carousel
-          setting={{
-            slidesToShow: 3,
-            arrows: false,
-            responsive: [
-              {
-                breakpoint: 1440,
-                settings: {
-                  slidesToShow: 2
-                }
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 1
-                }
-              }
-            ]
-          }}>
-          {products.map((product, idx) => (
-            <div className="px-3">
-              <ProductItem product={product} key={idx} />
-            </div>
-          ))}
-        </Carousel>
+         <ProductCorrelate/>
         {/* </div> */}
       </div>
     </div>

@@ -1,0 +1,32 @@
+.product-correlate {
+    .slide-custom {
+        > button {
+            border: none;
+
+            &:first-child {
+                left: -80px !important;
+
+                @media (max-width: 768px) {
+                    left: -40px !important;
+                }
+            }
+
+            &:last-child {
+                right: -80px !important;
+                @media (max-width: 768px) {
+                    right: -40px !important;
+                }
+            }
+        }
+        &.hidden-btn-left {
+            > button:first-child {
+                display: none !important;
+            }
+        }
+        &.hidden-btn-right {
+            > button:last-child {
+                display: none !important;
+            }
+        }
+    }
+}

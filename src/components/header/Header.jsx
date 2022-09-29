@@ -20,7 +20,7 @@ const Header = () => {
         <div className="logo-icon">
           <LogoIcon className="md:w-auto w-[80%]" onClick={() => router.push('./')}/>
         </div>
-        <div className="flex items-center justify-center gap-[30px] relative">
+        <div className="flex items-center justify-center md:gap-[30px] relative">
           <div className="input-container w-[100%] relative md:flex hidden items-center">
             <LogoSearch className="absolute right-[20px] " />
             <Input

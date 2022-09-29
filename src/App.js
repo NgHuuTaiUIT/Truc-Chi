@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useParams } from "react-router-dom";
 import CoverBackGround from "./components/cover-backgrond/CoverBackGround";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -6,6 +6,7 @@ import MenuRight from "./components/menu-right/MenuRight";
 import { CoverBackGroundProvider } from "./context/CoverBackgroundContext";
 import { MenuContextProvider } from "./context/MenuContext";
 import AboutUs from "./page/aboutUs";
+import AboutUsSub from "./page/aboutUsSubPage";
 import ContactPage from "./page/contactPage";
 import MainPage from "./page/mainPage";
 import NewsPage from "./page/newsPage";
@@ -31,6 +32,7 @@ function Layout() {
 }
 
 function App() {
+  
   return (
     <>
       <CoverBackGroundProvider>
@@ -43,7 +45,7 @@ function App() {
                 <Route exact path="/">
                   <MainPage />
                 </Route>
-                <Route path="/about">
+                <Route exact path="/about">
                   <AboutUs />
                 </Route>
                 <Route path="/news">
@@ -57,6 +59,9 @@ function App() {
                 </Route>
                 <Route path="/product/:id">
                   <ProductDetail />
+                </Route>
+                <Route path="/about-sub">
+                  <AboutUsSub />
                 </Route>
               </Switch>
               <Footer />

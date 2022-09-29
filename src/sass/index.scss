@@ -26,8 +26,10 @@
 .App {
   min-height: 100vh;
   width: 100%;
+  max-width: 100%;
   color: $txt-1;
   font-family: "Roboto";
+  overflow: hidden;
 }
 h1,
 h2,

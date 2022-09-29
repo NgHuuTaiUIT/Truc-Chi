@@ -3,6 +3,7 @@ import banner from "../assets/images/about-banner.png";
 import Container from "../components/Container/Container";
 import { ReactComponent as IconLine } from "../assets/icon/line.svg";
 import historyImg from "../assets/images/history.png";
+import { useHistory } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -23,7 +24,7 @@ const Introduce = () => {
   return (
     <Container className="mt-[-400px] min-h-0">
       <div className="max-w-[80%] m-auto">
-        <h1 className="w-full m-0 my-[95px] ml-auto text-center md:text-right">
+        <h1 className="w-full m-0 my-[95px] ml-auto text-center lg:text-right">
           Khái niệm Trúc Chỉ
         </h1>
         <div className="flex gap-[20px] flex-col md:flex-row">
@@ -44,10 +45,11 @@ const Introduce = () => {
 };
 
 const History = () => {
+  const history = useHistory();
   return (
     <Container className="min-h-0">
-      <div className="max-w-[80%] m-auto flex flex-col lg:flex-row gap-4 md:gap-0">
-        <h2 className="flex-1 m-0 ml-auto text-center md:w-full md:text-left">
+      <div className="max-w-[80%] m-auto flex flex-col lg:flex-row gap-4 md:gap-0" >
+        <h2 className="flex-1 m-0 ml-auto text-center cursor-pointer md:w-full md:text-left" onClick={() => history.push('/about-sub')}>
           Lịch sử hình thành và phát triển Trúc Chỉ
         </h2>
         <img src={historyImg} alt="" className="max-h-[455px] w-[100%] lg:w-[50%]" />

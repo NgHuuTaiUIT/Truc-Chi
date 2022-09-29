@@ -45,7 +45,7 @@ const ListProduct = ({ products }) => {
 
   const onLoadMore = () => {
 
-    if(limit >= count)
+    if(limit >= Math.round(products.length / count))
     {
       setLimit(1);
       setLoading(true);
@@ -102,7 +102,7 @@ const ListProduct = ({ products }) => {
         }}>
         <IconChevronDown
           onClick={onLoadMore}
-          className={`mx-auto cursor-pointer ${limit >= count ? 'rotate-180' : ''}`}
+          className={`mx-auto cursor-pointer ${limit >= Math.round(products.length / count) ? 'rotate-180' : ''}`}
         />
       </div>
     ) : null;
@@ -143,7 +143,8 @@ const ProductPage = () => {
         className="fluid min-h-[363px] flex "
         style={{
           backgroundImage: "url(../../assets/images/header-product.png)",
-          backgroundPositionX: "20%"
+          backgroundPositionX: "20%",
+          backgroundSize:"cover"
         }}>
         <h1>Sản phẩm</h1>
       </div>
@@ -158,8 +159,8 @@ const ProductPage = () => {
       </div>
 
       <div
-        className="pt-[127px] pb-[82px]"
-        style={{ background: "url(../../assets/images/banner-product-2.png)" }}>
+        className="pt-[127px] pb-[82px] bg-center bg-cover bg-no-repeat"
+        style={{ backgroundImage: "url(../../assets/images/banner-product-2.png)" }}>
         <h1 className="mx-auto w-[80%] text-right">
           Nghệ thuật <br />
           tạo hình
@@ -171,8 +172,8 @@ const ProductPage = () => {
       </div>
 
       <div
-        className="min-h-[490px] flex items-end"
-        style={{ background: "url(../../assets/images/banner-product-3.png)" }}>
+        className="min-h-[490px] flex items-end bg-center bg-no-repeat bg-cover"
+        style={{ backgroundImage: "url(../../assets/images/banner-product-3.png)" }}>
         <h1 className="w-full mb-[35px] text-center">
           Nghệ thuật ứng dụng
         </h1>
