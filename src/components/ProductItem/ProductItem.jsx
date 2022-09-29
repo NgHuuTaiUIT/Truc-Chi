@@ -23,7 +23,7 @@ const ProductItem = ({ active, setHeartItems, product }) => {
           />
         }>
         <IconHeart
-          className={`absolute top-4 right-4 cursor-pointer z-[1] ${
+          className={`absolute md:top-4 md:right-4 top-0 right-0 cursor-pointer z-[1] ${
             active ? "icon-heart" : ""
           }`}
           onClick={setHeartItems}

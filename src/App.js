@@ -1,8 +1,15 @@
-import { BrowserRouter as Router, Route, Switch, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useParams
+} from "react-router-dom";
 import CoverBackGround from "./components/cover-backgrond/CoverBackGround";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import MenuRight from "./components/menu-right/MenuRight";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { CoverBackGroundProvider } from "./context/CoverBackgroundContext";
 import { MenuContextProvider } from "./context/MenuContext";
 import AboutUs from "./page/aboutUs";
@@ -32,7 +39,6 @@ function Layout() {
 }
 
 function App() {
-  
   return (
     <>
       <CoverBackGroundProvider>
@@ -41,29 +47,31 @@ function App() {
             <Router basename={process.env.PUBLIC_URL}>
               <Header />
               <MenuRight />
-              <Switch>
-                <Route exact path="/">
-                  <MainPage />
-                </Route>
-                <Route exact path="/about">
-                  <AboutUs />
-                </Route>
-                <Route path="/news">
-                  <NewsPage />
-                </Route>
-                <Route path="/contact">
-                  <ContactPage />
-                </Route>
-                <Route path="/products">
-                  <ProductPage />
-                </Route>
-                <Route path="/product/:id">
-                  <ProductDetail />
-                </Route>
-                <Route path="/about-sub">
-                  <AboutUsSub />
-                </Route>
-              </Switch>
+              <ScrollToTop>
+                <Switch>
+                  <Route exact path="/">
+                    <MainPage />
+                  </Route>
+                  <Route exact path="/about">
+                    <AboutUs />
+                  </Route>
+                  <Route path="/news">
+                    <NewsPage />
+                  </Route>
+                  <Route path="/contact">
+                    <ContactPage />
+                  </Route>
+                  <Route path="/products">
+                    <ProductPage />
+                  </Route>
+                  <Route path="/product/:id">
+                    <ProductDetail />
+                  </Route>
+                  <Route path="/about-sub">
+                    <AboutUsSub />
+                  </Route>
+                </Switch>
+              </ScrollToTop>
               <Footer />
             </Router>
             <CoverBackGround />

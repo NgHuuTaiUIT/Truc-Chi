@@ -21,7 +21,7 @@ const Banner = () => {
 
 const Introduce = () => {
   return (
-    <Container className="min-h-0">
+    <Container className="min-h-0 mb-[65px] lg:mb-[127px]">
       <div className="max-w-[80%] m-auto flex flex-col gap-[72px]">
         <h1 className="w-full mx-auto text-center">
           Lịch sử hình thành và phát triển Trúc Chỉ
@@ -44,7 +44,7 @@ const Introduce = () => {
           <img
             src="https://picsum.photos/seed/picsum/466/466"
             alt=""
-            className="float-right px-[20px] py-[10px] max-w-[466px]"
+            className="float-right px-[20px] py-[10px] sm:max-w-[50%] min-w-[300px] max-w-full"
           />
           Do đó từ năm 2000, Họa sĩ Đồ họa Phan Hải Bằng (giảng viên Đại học
           Nghệ thuật, Đại học Huế) đã cùng các cộng sự liên tục thử nghiệm, tìm
@@ -62,7 +62,7 @@ const Introduce = () => {
           <img
             src="https://picsum.photos/466/466"
             alt=""
-            className="float-left px-[20px] py-[10px] max-w-[466px]"
+            className="float-left px-[20px] py-[10px] sm:max-w-[50%] min-w-[300px] max-w-full "
           />
           Do đó từ năm 2000, Họa sĩ Đồ họa Phan Hải Bằng (giảng viên Đại học
           Nghệ thuật, Đại học Huế) đã cùng các cộng sự liên tục thử nghiệm, tìm
@@ -80,7 +80,7 @@ const Introduce = () => {
         <img
           src="https://picsum.photos/1200"
           alt=""
-          className="w-full max-h-[466px]"
+          className="w-full max-w-full max-h-[466px]"
         />
         <h4 className="text-left">
           Tháng 09/2013, Công ty TNHH Nghệ thuật Trúc Chỉ Việt Nam chính thức
@@ -135,7 +135,7 @@ const CircleInfo = () => {
         <img
           src="https://picsum.photos/500"
           alt=""
-          className="circle rounded-full max-h-[466px] max-w-[466px] w-full h-full bg-txt1"
+          className="circle rounded-full max-h-[466px] max-w-[50%] w-full h-full bg-txt1"
         />
         <div className="flex items-center justify-center flex-1 min-w-[50%]">
           <h4 className="text-center lg:text-right text-[24px] lg:text-[32px]">

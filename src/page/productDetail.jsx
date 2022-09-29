@@ -109,7 +109,7 @@ const ProductDetail = () => {
           <button className="max-w-[275px]">Liên hệ Trúc Chỉ</button>
         </div>
       </div>
-      <div className="max-w-[80%] mx-auto md:pt-[127px] pt-[65px]">
+      <div className="max-w-[80%] mx-auto md:py-[127px] py-[65px]">
         <h4 className="text-left">Sản phẩm liên quan</h4>
         {/* <ListProduct /> */}
         {/* <div className="mb-[127px] grid justify-between w-full xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[40px]"> */}
